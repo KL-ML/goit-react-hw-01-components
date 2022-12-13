@@ -1,3 +1,5 @@
+import { Container } from "./App.styled";
+
 import { Profile } from "./Profile/Profile";
 import user from './Profile/user.json'
 
@@ -12,15 +14,18 @@ import transactions from './TransactionHistory/transactions.json';
 
 export const App = () => {
   return (
-    <div
-    //   style={{
-    //     height: '100vh',
-    //     display: 'flex',
-    //     justifyContent: 'center',
-    //     alignItems: 'center',
-    //     fontSize: 40,
-    //     color: '#010101'
-    //   }}
+    <Container 
+      // style={{
+      //   height: '100vh',
+      //   width: '540px',
+      //   margin: '0 auto',
+        // display: 'flex',
+        // flexDirection: 'column',
+        // justifyContent: 'center',
+        // alignItems: 'center',
+        // fontSize: 40,
+        // color: '#010101'
+      // }}
     >
       <Profile
         username={user.username}
@@ -29,10 +34,10 @@ export const App = () => {
         avatar={user.avatar}
         stats={user.stats}
       />
-      {/* <Statistics title="Upload stats" stats={data} /> */}
-      <Statistics stats={data}/>
+      <Statistics title="Upload stats" stats={data} />
+      {/* <Statistics stats={data}/> */}
       <FriendList friends={friends} />
       <TransactionHistory items={transactions}/>
-    </div>
+    </Container>
   );
 };
