@@ -22,3 +22,8 @@ ul {
 p {
   margin: 0;
 }
+
+.span {
+  background-color: #8ca9b7b4;
+  border-collapse: separate;
+}
