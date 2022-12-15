@@ -1,35 +1,40 @@
 import PropTypes from 'prop-types';
-import css from './Profile.module.css';
+import { ProfileDiv, ProfileDescription, ProfileAvatar, ProfileName, ProfileTag, ProfileLocation, ProfileStats, ProfileStatsItem, ProfileLabel, ProfileQuantity } from './Profile.styled';
+import { Button } from 'components/button';
+import { BsFillCircleFill, BsFillCheckCircleFill, BsFillDiamondFill } from 'react-icons/bs';
 
 export const Profile = ({username, tag, location, avatar, stats}) => {
     return (
-        <div className={css.profile}>
-            <div className={css.description}>
-                <img
+        <ProfileDiv>
+            <ProfileDescription>
+                <ProfileAvatar
                     src={avatar}
                     alt={username}
-                    className={css.avatar}
                 />
-                <p className={css.name}>{username}</p>
-                <p className={css.tag}>@{tag}</p>
-                <p className={css.location}>{location}</p>
-            </div>
+                <ProfileName>{username}</ProfileName>
+                <ProfileTag>@{tag}</ProfileTag>
+                <ProfileLocation>{location}</ProfileLocation>
+            </ProfileDescription>
 
-            <ul className={css.stats}>
-                <li>
-                    <span className={css.label}>Followers</span>
-                    <span className={css.quantity}>{stats.followers}</span>
-                </li>
-                <li>
-                    <span className={css.label}>Views</span>
-                    <span className={css.quantity}>{stats.views}</span>
-                </li>
-                <li>
-                    <span className={css.label}>Likes</span>
-                    <span className={css.quantity}>{stats.likes}</span>
-                </li>
-            </ul>
-        </div>
+            <ProfileStats>
+                <ProfileStatsItem>
+                    <ProfileLabel>Followers</ProfileLabel>
+                    <ProfileQuantity>{stats.followers}</ProfileQuantity>
+                </ProfileStatsItem>
+                <ProfileStatsItem>
+                    <ProfileLabel>Views</ProfileLabel>
+                    <ProfileQuantity>{stats.views}</ProfileQuantity>
+                </ProfileStatsItem>
+                <ProfileStatsItem>
+                    <ProfileLabel>Likes</ProfileLabel>
+                    <ProfileQuantity>{stats.likes}</ProfileQuantity>
+                </ProfileStatsItem>
+            </ProfileStats>
+            <Button icon={BsFillCircleFill}>Search</Button>
+            <Button icon={BsFillCheckCircleFill}>Filter</Button>
+            <Button icon={BsFillDiamondFill}>Show modal</Button>
+            <Button type="submit">LogIn</Button>
+        </ProfileDiv>
     );
 };
 
