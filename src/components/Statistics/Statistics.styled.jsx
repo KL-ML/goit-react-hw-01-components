@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 
 export const Section = styled.section`
-    width: fit-content;
+    width: 100%;
     border: solid 1px black;
     margin-bottom: 20px;
 `;
@@ -17,16 +17,17 @@ export const List = styled.ul`
     display: flex;
     justify-content: space-around;
     align-items: center;
+    
 `;
 
 export const Item = styled.li`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    flex-flow: wrap;
     align-items: center;
+    flex-basis: 100%;
     border: solid 1px black;
-    padding: 10px 15px;
+    padding: 10px 0;
 `;
 
 export const Label = styled.span`
