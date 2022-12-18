@@ -1,12 +1,24 @@
 import PropTypes from 'prop-types';
-import { ProfileDiv, ProfileDescription, ProfileAvatar, ProfileName, ProfileTag, ProfileLocation, ProfileStats, ProfileStatsItem, ProfileLabel, ProfileQuantity } from './Profile.styled';
-import { Button } from 'components/button';
-import { BsFillCircleFill, BsFillCheckCircleFill, BsFillDiamondFill } from 'react-icons/bs';
+import { ProfileAvatar, ProfileName, ProfileTag, ProfileLocation, ProfileStatsItem, ProfileLabel, ProfileQuantity } from './Profile.styled';
+import { Box } from 'components/Box';
 
 export const Profile = ({username, tag, location, avatar, stats}) => {
     return (
-        <ProfileDiv>
-            <ProfileDescription>
+        <Box
+            bg="backgroundCard"
+            boxShadow="boxShadowSection"
+            borderRadius="normal"
+            overflow="hidden"
+            mb={24}
+        >
+            <Box
+                display="flex"
+                flexDirection="column"
+                justifyContent="center"
+                alignItems="center"
+                py={24}
+                px={0}
+            >
                 <ProfileAvatar
                     src={avatar}
                     alt={username}
@@ -14,9 +26,21 @@ export const Profile = ({username, tag, location, avatar, stats}) => {
                 <ProfileName>{username}</ProfileName>
                 <ProfileTag>@{tag}</ProfileTag>
                 <ProfileLocation>{location}</ProfileLocation>
-            </ProfileDescription>
+            </Box>
 
-            <ProfileStats>
+            <Box
+                display="flex"
+                justifyContent="center"
+                alignItems="center"
+                borderRadius="normal"
+                backgroundImage="linear-gradient(
+                130deg,
+                #DE7B7B 20%,
+                 #CA68A3 60%,
+                #B25CCE
+                );"
+                as="ul"
+            >
                 <ProfileStatsItem>
                     <ProfileLabel>Followers</ProfileLabel>
                     <ProfileQuantity>{stats.followers}</ProfileQuantity>
@@ -29,12 +53,8 @@ export const Profile = ({username, tag, location, avatar, stats}) => {
                     <ProfileLabel>Likes</ProfileLabel>
                     <ProfileQuantity>{stats.likes}</ProfileQuantity>
                 </ProfileStatsItem>
-            </ProfileStats>
-            <Button icon={BsFillCircleFill}>Search</Button>
-            <Button icon={BsFillCheckCircleFill}>Filter</Button>
-            <Button icon={BsFillDiamondFill}>Show modal</Button>
-            <Button type="submit">LogIn</Button>
-        </ProfileDiv>
+            </Box>
+        </Box>
     );
 };
 
