@@ -9,8 +9,7 @@ export const IsOnlineDot = styled.div`
         return p.isOnline
             ? p.theme.colors.isOnline
             : p.theme.colors.isOffline
-    }};
-    
+    }}; 
 `;
 
 export const FriendAvatar = styled.img`
