@@ -1,15 +1,33 @@
 import PropTypes from 'prop-types';
-import { Section, Title, List, Item, Label, Percentage } from './Statistics.styled';
+import { Title, Item, Label, Percentage } from './Statistics.styled';
+import { Box } from 'components/Box';
 
 export const Statistics = ({ title, stats }) => {
     return (
-        <Section>
+        <Box
+            bg="backgroundCard"
+            boxShadow="boxShadowSection"
+            borderRadius="normal"
+            overflow="hidden"
+            mb={24}
+        >
             {
                 title && (
                     <Title>{title}</Title>
                 )
             }
-            <List>
+            <Box
+                display="flex"
+                alignItems="center"
+                borderRadius="normal"
+                backgroundImage="linear-gradient(
+                130deg,
+                #DE7B7B 20%,
+                 #CA68A3 60%,
+                #B25CCE
+                );"
+                as="ul"
+            >
                 {
                     stats.map(({ id, label, percentage }) => {
                         return (
@@ -20,8 +38,8 @@ export const Statistics = ({ title, stats }) => {
                         )
                     })
                 }
-            </List>
-        </Section>
+            </Box>
+        </Box>
     );
 };
 
