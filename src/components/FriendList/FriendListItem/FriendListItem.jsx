@@ -1,14 +1,29 @@
 // import PropTypes from 'prop-types';
-import { FriendsItem, FriendIsOnline, FriendAvatar, FriendName } from './FriendListItem.styled';
+import { IsOnlineDot, FriendAvatar, FriendName } from './FriendListItem.styled';
+import { Box } from 'components/Box';
 
 
-export const FriendListItem = ({ id, avatar, name, isOnline }) => {
+export const FriendListItem = ({ id, avatar, name, isOnline = false }) => {
     return (
-        <FriendsItem key={id}>
-            <FriendIsOnline>O</FriendIsOnline>
-            <FriendAvatar src={avatar} alt={name} />
+        <Box
+            key={id}
+            as="li"
+            display="flex"
+            alignItems="center"
+            boxShadow="shadowStats"
+            py={3}
+            px={5}    
+        >
+            <IsOnlineDot
+               isOnline={isOnline} 
+            >
+            </IsOnlineDot>
+            <FriendAvatar
+                src={avatar}
+                alt={name}
+            />
             <FriendName>{name}</FriendName>
-        </FriendsItem>
+        </Box>
     );
 };
 
