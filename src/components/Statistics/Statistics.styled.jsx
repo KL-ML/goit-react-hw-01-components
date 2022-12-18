@@ -1,23 +1,10 @@
 import styled from "@emotion/styled";
 
-export const Section = styled.section`
-    width: 100%;
-    border: solid 1px black;
-    margin-bottom: 20px;
-`;
-
 export const Title = styled.h2`
     text-transform: uppercase;
-    font-size: 24px;
-    color: rgb(85, 85, 85);
+    font-size: ${p => p.theme.fontSizes[4]}px;
+    color: ${p => p.theme.colors.muted};
     text-align: center;
-`;
-
-export const List = styled.ul`
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    
 `;
 
 export const Item = styled.li`
@@ -26,14 +13,15 @@ export const Item = styled.li`
     justify-content: center;
     align-items: center;
     flex-basis: 100%;
-    border: solid 1px black;
-    padding: 10px 0;
+    box-shadow: ${p => p.theme.shadows.shadowStats};
+    border-collapse: collapse;
+    padding: ${p => p.theme.space[3]}px ${p => p.theme.space[0]};
 `;
 
 export const Label = styled.span`
-    margin: 4px;
+    margin: ${p => p.theme.space[2]}px;
 `;
 
 export const Percentage = styled.span`
-    font-size: 24px;
+    font-size:  ${p => p.theme.fontSizes[4]}px;
 `;
