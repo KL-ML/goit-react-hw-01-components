@@ -1,51 +1,43 @@
 import styled from "@emotion/styled";
 
-export const ProfileDiv = styled.div`
-    box-shadow: ${p => p.theme.shadows.boxShadowSection};
-    margin-bottom: 20px;
-`;
-
-export const ProfileDescription = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px 0;
-`;
 export const ProfileAvatar = styled.img`
+    border-radius: ${p => p.theme.radii.round};
+    background-color: ${p => p.theme.colors.text};
+    border: ${p => p.theme.borders.bold} ${p => p.theme.colors.accent};
+    box-shadow: ${p => p.theme.shadows.avatarShadow};
     width: 40%;
-    margin-bottom: 10px;
+    margin: ${p => p.theme.space[5]}px;
 `;
 export const ProfileName = styled.p`
-    font-size: 24px;
-    margin-bottom: 10px;
+    font-family: ${p => p.theme.fonts.heading};
+    font-size: ${p => p.theme.fontSizes[4]}px;
+    color: ${p => p.theme.colors.text};
+    margin-bottom: ${p => p.theme.space[3]}px;
 `;
 export const ProfileTag = styled.p`
-    margin-bottom: 10px;
+    font-size: ${p => p.theme.fontSizes[1]}px;
+    font-weight: ${p => p.theme.fontWeights.bold};
+    margin-bottom: ${p => p.theme.space[3]}px;
+    color: ${p => p.theme.colors.accent};
 `;
 export const ProfileLocation = styled.p`
+    font-style: italic;
+    color: ${p => p.theme.colors.muted};
 `;
-export const ProfileStats = styled.ul`
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-`;
+
 export const ProfileStatsItem = styled.li`
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     flex-basis: 100%;
-    //box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
     box-shadow: ${p => p.theme.shadows.shadowStats};
-    //border: solid 1px #8ca9b7b4;
     border-collapse: collapse;
-    padding: 10px 0;
-    background-color: #acdce099;
+    padding: ${p => p.theme.space[3]}px ${p => p.theme.space[0]};
 `;
 export const ProfileLabel = styled.span`
-    margin: 4px;
+    margin: ${p => p.theme.space[2]}px;
 `;
 export const ProfileQuantity = styled.span`
-    font-size: 24px;
+    font-size: ${p => p.theme.fontSizes[4]}px;
 `;
