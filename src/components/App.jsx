@@ -1,5 +1,3 @@
-import { Container } from "./App.styled";
-
 import { Profile } from "./Profile/Profile";
 import user from './Profile/user.json'
 
@@ -11,21 +9,19 @@ import friends from './FriendList/friends.json';
 
 import { TransactionHistory } from "./TransactionHistory/TransactionHistory";
 import transactions from './TransactionHistory/transactions.json';
+import { Box } from "./Box";
 
 export const App = () => {
   return (
-    <Container 
-      // style={{
-      //   height: '100vh',
-      //   width: '540px',
-      //   margin: '0 auto',
-        // display: 'flex',
-        // flexDirection: 'column',
-        // justifyContent: 'center',
-        // alignItems: 'center',
-        // fontSize: 40,
-        // color: '#010101'
-      // }}
+    <Box
+      bg="background"
+      color='text'
+      width="containerWidth"
+      position="relative"
+      p={32}
+      my={0}
+      mx="auto"
+      boxShadow="containerShadow"
     >
       <Profile
         username={user.username}
@@ -38,6 +34,6 @@ export const App = () => {
       {/* <Statistics stats={data}/> */}
       <FriendList friends={friends} />
       <TransactionHistory items={transactions}/>
-    </Container>
+    </Box>
   );
 };
