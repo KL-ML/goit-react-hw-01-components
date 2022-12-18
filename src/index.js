@@ -4,7 +4,7 @@ import { App } from 'components/App';
 import './index.css';
 import { ThemeProvider } from '@emotion/react';
 // import { ThemeProvider } from 'styled-components';
-import { theme } from './theme';
+import { theme } from './constants';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
