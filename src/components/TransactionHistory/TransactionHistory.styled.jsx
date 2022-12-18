@@ -10,17 +10,11 @@ export const Thead = styled.thead`
     color: ${p => p.theme.colors.accent};
 `;
 
-export const TableTH = styled.th`
-    
-`;
-
 export const Tbody = styled.tbody`
     text-align: center;
-    
 `;
 
 export const TableTD = styled.td`
     padding: 4px;
     border-top: ${p => p.theme.borders. normal} ${p => p.theme.colors.background};
-
 `;
