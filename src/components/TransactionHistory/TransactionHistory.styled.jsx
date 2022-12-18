@@ -16,5 +16,5 @@ export const Tbody = styled.tbody`
 
 export const TableTD = styled.td`
     padding: 4px;
-    border-top: ${p => p.theme.borders. normal} ${p => p.theme.colors.background};
+    border-top: ${p => p.theme.borders.normal} ${p => p.theme.colors.background};
 `;
