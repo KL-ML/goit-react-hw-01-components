@@ -1,10 +1,18 @@
+import { Box } from 'components/Box';
 import PropTypes from 'prop-types';
 import { List } from './FriendList.styled';
 import { FriendListItem } from "./FriendListItem/FriendListItem";
 
 export const FriendList = ({ friends }) => {
     return (
-        <List>
+        <Box
+            as="ul"
+            bg="backgroundCard"
+            boxShadow="boxShadowSection"
+            borderRadius="normal"
+            overflow="hidden"
+            mb={24}
+        >
             {
                 friends.map(({ id, avatar, name, isOnline }) => {
                     return (
@@ -17,7 +25,7 @@ export const FriendList = ({ friends }) => {
                     )
                 })
             }   
-        </List>
+        </Box>
     );
 };
 
