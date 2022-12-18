@@ -8,15 +8,14 @@ export const TransactionHistory = ({ items }) => {
             bg="backgroundCard"
             boxShadow="boxShadowSection"
             borderRadius="normal"
-            overflow="hidden"
-            
+            overflow="hidden" 
         >
             <Table>
                 <Thead>
                     <tr>
-                        <TableTH>Type</TableTH>
-                        <TableTH>Amount</TableTH>
-                        <TableTH>Currency</TableTH>
+                        <th>Type</th>
+                        <th>Amount</th>
+                        <th>Currency</th>
                     </tr>
                 </Thead>
 
