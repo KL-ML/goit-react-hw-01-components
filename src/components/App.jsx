@@ -9,6 +9,7 @@ import friends from './FriendList/friends.json';
 
 import { TransactionHistory } from "./TransactionHistory/TransactionHistory";
 import transactions from './TransactionHistory/transactions.json';
+
 import { Box } from "./Box";
 
 export const App = () => {
